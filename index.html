@@ -1,77 +1,80 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
   <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script  src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
-  <title>Address book</title>
+
+  <title>Ricks Drone Pizza</title>
 </head>
 <body>
-
   <div class="container">
     <div class="jumbotron">
       <h1>RICKS DRONE PIZZA DELIVERY</h1>
     </div>
     <div class="center">
       <h1 class="center">"I feel the need......the need for speed!"---Maverick from Top Gun.</h1>
-        <iframe width="650" height="315" src="https://www.youtube.com/embed/qDtsTQNGfWQ" frameborder="1" ></iframe>"
+      <iframe width="650" height="315" src="https://www.youtube.com/embed/qDtsTQNGfWQ" frameborder="1" ></iframe>"
       <h1>Place your order </h1>
 
       <div class="row">
-        <div class="col-md-4">
-          <h2>Choose a size:</h2>
-          <h3>Sizes are:</h3>
-          <p>Small = 10 inches</p>
-          <p>Medium = 14 inches</p>
-          <p>Large = 18 inches</p>
-
+        <div class="col-md-6">
           <form id="place-order">
-            <div class="form-group">
-              <label for="new-size">Small, Medium, or Large?</label>
-              <input type="text" class="form-control" id="new-size">
-            </div>
-        </div>
-        <div class="col-md-4">
-          <h2>Choose your toppings</h2>
-          <h3>We Have:</h3>
-          <p>Peperroni</p>
-          <p>Mushrooms</p>
-          <p>Hamburger<p>
 
+            <h2>Choose a size:</h2>
+            <h3>Sizes are:</h3>
             <div class="form-group">
-              <label for="first-top">Choose your toppings.</label>
-              <input type="text" class="form-control" id="first-top">
+              <select class="form-control" id="input1">
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+              <br>
+              <br>
+              <button type="submit" class="btn btn-success <btn-></btn->large">SelectSize </button>
             </div>
-
-            <button type="submit" class="btn btn-success btn-large">Add selected items </button>
           </form>
-          <div id="show-order">
-            <h2></h2>
 
-            <p>Size: <span class="new-size"></span></p>
-            <p>Topping: <span class="first-top"></span></p>
+          <form>
+            <div>
+              <h2>Choose your toppings</h2>
+              <h3>We Have:</h3>
+              <p>Peperroni  $1.50</p>
+              <button class="btn btn-primary btn-danger" id="pep">Peperroni</button>
+              <p>Mushrooms  $1.50</p>
+              <button class="btn btn-primary btn-danger" id="mush">Mushrooms</button>
+              <p>Hamburger  $1.50<p>
+                <button class="btn btn-primary btn-danger" id="hamb">Hamburger</button>
+              </div>
+              <div class="col-md-6">
+
+              </form>
+              <div id="show-order">
+                <h2></h2>
+
+                <p>Size: <span class="new-size"></span></p>
+                <p>Topping: <span class="first-top"></span></p>
+              </div>
+            </div>
+
+
+            <div class="col-md-6">
+              <h2>Your Order</h2>
+              <ul id="your-order">
+
+              </ul>
+            </div>
+
+
           </div>
         </div>
 
 
-        <div class="col-md-4">
-          <h2>Your Order</h2>
-          <ul id="your-order">
 
-          </ul>
-        </div>
-
-
-        </div>
       </div>
-
-
-
-    </div>
-  </div> -->
-</div>
+    </div> -->
+  </div>
 </body>
 </html>
