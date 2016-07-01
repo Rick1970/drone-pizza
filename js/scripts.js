@@ -1,85 +1,28 @@
 // /business logic
-function Contact(first, last) {
-  this.firstName = first;
-  this.lastName = last;
-  this.addresses = [];
+function Order(size, toppings){
+  this.size = size;
+  this.toppings = toppings;
+
 }
 
-function Address(street, city, state, phone) {
-  this.street = street;
-  this.city = city;
-  this.state = state;
-  this.phone = phone;
-}
 
-Contact.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
-}
-
-Address.prototype.fullAddress = function() {
-  return this.street + ", " + this.city + ", " + this.state + " , " + this.phone;
-}
-
-// user interface logic
-$(document).ready(function() {
-  $("#add-address").click(function() {
-    $("#new-addresses").append('<div class="new-address">' +
-    '<div class="form-group">' +
-    '<label for="new-street">Street</label>' +
-    '<input type="text" class="form-control new-street">' +
-    '</div>' +
-    '<div class="form-group">' +
-    '<label for="new-city">City</label>' +
-    '<input type="text" class="form-control new-city">' +
-    '</div>' +
-    '<div class="form-group">' +
-    '<label for="new-state">State</label>' +
-    '<input type="text" class="form-control new-state">' +
-    '</div>' +
-    '<div class="form-group">' +
-    '<label for="phone">Phone</label>' +
-    '<input type="text" class="form-control phone">' +
-    '</div>' +
-    '</div>');
-  });
-
-  $("form#new-contact").submit(function(event) {
+$(document).ready(function(){
+  $("form#place-order").submit(function(event){
     event.preventDefault();
+    var inputtedSize = $("input#new-size").val();
+    var inputtedTop = $("input#first-top").val();
+    var newOrder = new Order(inputtedSize, inputtedTop);
+    
+    $("ul#your-order").append("<li><span class='order'>" + newOrder.size + "</span></li>");
+    $(".order").last().click(function(){
+      $("#show-order").show();
+      $("#show-order h2").text(newOrder.size);
+      $(".new-size").text(newOrder.size);
+      $(".first-top").text(newOrder.toppings);
 
-    var inputtedFirstName = $("input#new-first-name").val();
-    var inputtedLastName = $("input#new-last-name").val();
-    var newContact = new Contact(inputtedFirstName, inputtedLastName);
-
-    $(".new-address").each(function() {
-      var inputtedStreet = $(this).find("input.new-street").val();
-      var inputtedCity = $(this).find("input.new-city").val();
-      var inputtedState = $(this).find("input.new-state").val();
-      var inputtedPhone = $(this).find("input.phone").val();
-      var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState, inputtedPhone)
-      newContact.addresses.push(newAddress)
     });
-
-    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
-
-    $(".contact").last().click(function() {
-      $("#show-contact").show();
-      $("#show-contact h2").text(newContact.fullName());
-      $(".first-name").text(newContact.firstName);
-      $(".last-name").text(newContact.lastName);
-      $("ul#addresses").text("");
-      newContact.addresses.forEach(function(address) {
-        $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
-      });
-    });
-
-    function resetFields() {
-      $("input#new-first-name").val("");
-      $("input#new-last-name").val("");
-      $("input.new-street").val("");
-      $("input.new-city").val("");
-      $("input.new-state").val("");
-      $("input.phone").val("");
-    }
+    $("input#new-size").val("");
+    $("input#first-top").val("");
 
   });
 });

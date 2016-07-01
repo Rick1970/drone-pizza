@@ -14,34 +14,19 @@
 
 body {
   color:  #FFF600;
-}
-
-#navback {
   background-color: #197BBD;
-  color:  #FFF600;
 }
 
-
-/*.jumbotron  {
-  text-align: center;
-  margin-top: 50px;
-  background-image: url("http://us.123rf.com/450wm/cheskyw/cheskyw1502/cheskyw150200021/36804074-air-drone-carrying-single-pizza-box.jpg?ver=6");
-  opacity: 0.6;
-}*/
-how-contact {
+#show-order {
   display: none;
+  text-align: center;
 }
 
-.contact {
+.order {
   cursor: pointer;
-  color: #0088cc;
+  color: #red;
 }
 
-.contact:hover {
+.order:hover {
   text-decoration: underline;
-}
-
- body {
-  background-color: #197BBD;
-
 }
