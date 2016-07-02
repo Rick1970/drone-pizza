@@ -15,7 +15,7 @@ function Toppings(mushroom, peperroni, hamburger){
   this.hamburger = "hamburger";
 }
 
-
+var inputtedToppings = [];
 
 
 $(document).ready(function(){
@@ -25,13 +25,26 @@ $(document).ready(function(){
     alert(inputtedSize);
 
 
- $("button#top1").click(function(event){
-   var inputtedToppings = [];
+ $("button#pep").click(function(event){
+
   inputtedToppings.push("peperroni");
    event.preventDefault();
   alert(inputtedToppings);
-  });
 
+  // $("button#mush").click(function(event){
+  // //   var inputtedToppings = [];
+  //  inputtedToppings.push("mushroom");
+  //   event.preventDefault();
+  //  alert(inputtedToppings);
+  //
+  //  $("button#hamb").click(function(event){
+  //    var inputtedToppings = [];
+  //   inputtedToppings.push("hamburger");
+  //    event.preventDefault();
+  //   alert(inputtedToppings);
+
+
+  });
 
     $("ul#your-order").append("<li><span class='order'>" + newOrder.size + "</span></li>");
     $(".order").last().click(function(){
