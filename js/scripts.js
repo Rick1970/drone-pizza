@@ -47,8 +47,10 @@ $(document).ready(function(){
     alert(inputtedToppings);
 
   });
+    // $("ul#your-order").append("<li><span>" + newOrder.size + newOrder.toppings"</li>");
+
 });
-//     $("ul#your-order").append("<li><span class='order'>" + newOrder.size + "</span></li>");
+
 //     $(".order").last().click(function(){
 //       $("#show-order").show();
 //       $("#show-order h2").text(newOrder.size);
