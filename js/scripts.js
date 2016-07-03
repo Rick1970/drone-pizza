@@ -24,38 +24,40 @@ $(document).ready(function(){
     var inputtedSize = $("#input1").val();
     alert(inputtedSize);
 
+  });
 
- $("button#pep").click(function(event){
+  $("button#pep").click(function(event){
+    inputtedToppings.push("peperroni");
+    event.preventDefault();
+    alert(inputtedToppings);
 
-  inputtedToppings.push("peperroni");
-   event.preventDefault();
-  alert(inputtedToppings);
+  });
 
-  // $("button#mush").click(function(event){
-  // //   var inputtedToppings = [];
-  //  inputtedToppings.push("mushroom");
-  //   event.preventDefault();
-  //  alert(inputtedToppings);
-  //
-  //  $("button#hamb").click(function(event){
-  //    var inputtedToppings = [];
-  //   inputtedToppings.push("hamburger");
-  //    event.preventDefault();
-  //   alert(inputtedToppings);
+  $("button#mush").click(function(event){
+    inputtedToppings.push("mushroom");
+    event.preventDefault();
+    alert(inputtedToppings);
 
 
   });
 
-    $("ul#your-order").append("<li><span class='order'>" + newOrder.size + "</span></li>");
-    $(".order").last().click(function(){
-      $("#show-order").show();
-      $("#show-order h2").text(newOrder.size);
-      $(".new-size").text(newOrder.size);
-      $(".first-top").text(newOrder.toppings);
-
-    });
-    $("input#new-size").val("");
-    $("input#first-top").val("");
+  $("button#hamb").click(function(event){
+    inputtedToppings.push("hamburger");
+    event.preventDefault();
+    alert(inputtedToppings);
 
   });
 });
+//     $("ul#your-order").append("<li><span class='order'>" + newOrder.size + "</span></li>");
+//     $(".order").last().click(function(){
+//       $("#show-order").show();
+//       $("#show-order h2").text(newOrder.size);
+//       $(".new-size").text(newOrder.size);
+//       $(".first-top").text(newOrder.toppings);
+//
+//     });
+//     $("input#new-size").val("");
+//     $("input#first-top").val("");
+//
+//   });
+// });
