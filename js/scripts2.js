@@ -32,13 +32,8 @@ $(document).ready(function(){
     var inputSize = $("#input1").val();
     var inputTopping = $("#input2").val();
     var newOrder = new Pizza (inputSize, inputTopping);
-    var total = sizePrice + toppingPrice;
-    alert(newOrder.size);
-    alert(newOrder.toppings);
     total = sizePrice + toppingPrice;
-    alert(total);
     $("ul#final").append("<li>" + newOrder.size + newOrder.toppings + "</li>");
     $("ul#finalprice").append("<li>" + "$" + total + "0" + "</li>");
   });
   });
-alert("test");
