@@ -34,9 +34,9 @@ $(document).ready(function(){
     else if (inputtedTopping === "Mushrooms"){
       toppingTotal = 1.50;
     }
-     $("ul#finalprice").append("<li>" + "$" + sizeTotal + toppingTotal +  "</li>");
+    $("ul#finalprice").append("<li>" + "$" + sizeTotal + toppingTotal +  "</li>");
   });
-  });
+});
 
 
 
@@ -55,4 +55,4 @@ $(document).ready(function(){
     // $("ul#finalprice").append("<li>" + "$" + sizeTotal + toppingTotal "</li>");
 
   });
-  });
+});
