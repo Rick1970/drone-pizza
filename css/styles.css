@@ -17,6 +17,13 @@ body {
   background-color: #197BBD;
 }
 
+#final {
+  font-size: 2em;
+}
+
+#finalprice {
+  font-size: 2em;
+}
 /*#show-order {
   display: none;
   text-align: center;

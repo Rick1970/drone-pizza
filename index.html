@@ -17,10 +17,10 @@
     <div class="center">
       <h1 class="center">"I feel the need......the need for speed!"---Maverick from Top Gun.</h1>
       <iframe width="650" height="315" src="https://www.youtube.com/embed/qDtsTQNGfWQ" frameborder="1" ></iframe>"
-      <h1>Place your order </h1>
 
       <div class="row">
         <div class="col-md-6">
+          <h1>Place your order </h1>
           <form id="place-order">
 
             <h2>Choose a size:</h2>
@@ -31,51 +31,36 @@
                 <option>Medium</option>
                 <option>Large</option>
               </select>
-              <br>
-              <br>
-              <button type="submit" class="btn btn-success <btn-></btn->large">SelectSize </button>
             </div>
+            <div class="form-group">
+              <h2>Choose a topping:</h2>
+              <h3>Toppings are:</h3>
+              <select class="form-control" id="input2">
+                <option>Peperoni</option>
+                <option>Mushrooms</option>
+              </select>
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-success <btn-></btn->large">Submit</button>
+
           </form>
 
-          <form>
-            <div>
-              <h2>Choose your toppings</h2>
-              <h3>We Have:</h3>
-              <p>Peperroni  $1.50</p>
-              <button class="btn btn-primary btn-danger" id="pep">Peperroni</button>
-              <p>Mushrooms  $1.50</p>
-              <button class="btn btn-primary btn-danger" id="mush">Mushrooms</button>
-              <p>Hamburger  $1.50<p>
-                <button class="btn btn-primary btn-danger" id="hamb">Hamburger</button>
-              </div>
-            </form>
+
         </div>
-            <!-- <div class="col-md-6">
-              <h2>Your Order</h2>
-              <div id="show-order">
-                <h2></h2>
-
-                <p>Size: <span class="new-size"></span></p>
-                <p>Topping: <span class="first-top"></span></p>
-              </div>
-            </div> -->
 
 
-        <div class="col-md-6">
-          <h2>Your Current Order</h2>
-            <ul id="your-order">
-
-          </ul>
-        </div> -->
 
 
+
+      <div class="col-md-6">
+        <h2>Your Order</h2>
+        <ul id="final">
+        </ul>
+        <h2>Your Total</h2>
+        <ul id="finalprice">
+        </ul>
       </div>
-
-
-
-
-  </div>
-</div> -->
-</div>
-</body>
-</html>
+      </div>
+    </body>
+    </html>
