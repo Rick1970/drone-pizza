@@ -24,16 +24,7 @@ body {
 #finalprice {
   font-size: 2em;
 }
-/*#show-order {
-  display: none;
-  text-align: center;
-}
 
-.order {
-  cursor: pointer;
-  color: #red;
+ul {
+  text-decoration: none;
 }
-
-.order:hover {
-  text-decoration: underline;
-}*/

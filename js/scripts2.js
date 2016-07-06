@@ -26,6 +26,7 @@ function Pizza (size, toppings){
   }
 }
 
+
 $(document).ready(function(){
   $("form#place-order").submit(function(event){
     event.preventDefault();
