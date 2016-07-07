@@ -5,7 +5,9 @@ var total;
 function Pizza (size, toppings){
   this.size = size;
   this.toppings = toppings;
+}
 
+Pizza.prototype.calculate = function(){
   if (this.size === "Small"){
    sizePrice = 8.00;
   }
@@ -24,7 +26,8 @@ function Pizza (size, toppings){
   else if (this.toppings === "Peperoni"  && this.toppings === "Mushrooms"){
     toppingPrice = 3.00;
   }
-}
+
+};
 
 
 $(document).ready(function(){
@@ -33,6 +36,7 @@ $(document).ready(function(){
     var inputSize = $("#input1").val();
     var inputTopping = $("#input2").val();
     var newOrder = new Pizza (inputSize, inputTopping);
+    newOrder.calculate();
     total = sizePrice + toppingPrice;
     $("ul#final").append("<li>" + newOrder.size + newOrder.toppings + "</li>");
     $("ul#finalprice").append("<li>" + "$" + total + "0" + "</li>");
