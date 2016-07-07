@@ -6,11 +6,11 @@
 
 ## Description
 
-_Receives custmers pizza order through button inputs on the page.  The user can select size, and toppings that display in the order window with a running total.  After the order is submitted, a digital timer is activated counting down from thirty minutes._ _[https://rick1970.github.io/ping-pong-app/]_
+_Receives custmers pizza order through button inputs on the page.  The user can select size, and toppings that display in the order window with a running total.  After the order is submitted, a digital timer is activated counting down from thirty minutes._ _[https://rick1970.github.io/drone-pizza/]_
 
 ## Setup/Installation Requirements
 
-_File can be cloned from Github @ [https://github.com/Rick1970/ping-pong-app.git].
+_File can be cloned from Github @ [https://github.com/Rick1970/drone-pizza].
 Open with text editor of your choice.
 Run in browser of your choice._
 
