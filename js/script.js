@@ -33,10 +33,8 @@ Pizza.prototype.calculate = function(){
 
 
 
-
 $(document).ready(function(){
   $("form#place-order").submit(function(event){
-    $("#hide").show();
     event.preventDefault();
     var inputSize = $("#input1").val();
     var inputTopping = $("#input2").val();
@@ -44,20 +42,5 @@ $(document).ready(function(){
     var total = newOrder.calculate();
     $("ul#final").append("<li>" + newOrder.size + newOrder.toppings + "</li>");
     $("ul#finalprice").append("<li>" + "$" + total + "0" + "</li>");
-
-
-
-
-    $("form#place-order2").click(function(event) {
-      inputSize = $("#input1").val();
-      inputTopping = $("#input2").val();
-      var newOrder2 = new Pizza (inputSize, inputTopping);
-      var total2 = newOrder2.calculate();
-      var multiTotal = total + total2;
-      $("ul#mult").append("<li>" + "$" + multiTotal + "</li>");
-      return false;
-});
-
   });
-
- });
+  });
